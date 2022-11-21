@@ -1,7 +1,12 @@
+import { useRef } from "react";
+import useScrollSnap from "react-use-scroll-snap";
+
 function Home() {
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 20, delay: 10 });
   return (
     <main className="content" id="main">
-      <div className="container-fluid dropdown-card">
+      <div className="container-fluid dropdown-card" ref={scrollRef}>
         <div className="container-fluid backgroundForLanding mb-1 homeFirstImage">
           <div className="container overflow-hidden mx-lg-auto pt-10 content-space-t-5">
             <div className="pb-3 text-center">
@@ -88,101 +93,100 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="container content-space-b-2 content-space-b-lg-3 mt-10">
-        <div className="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-          <h1>STORIES</h1>
-        </div>
-
-        <div className="row">
-          <div className="col-sm-6 col-md-3 mb-5 mb-md-0">
-            <div className="card h-100">
-              <div className="overlay">
-                <a href="#">
-                  <img
-                    className="card-img-top homeOverlayImageSize"
-                    src="img/story12.png"
-                    alt="Image Description"
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <p>New Website Soft Launch</p>
-                <p className="fontBolder">
-                  We are more than happy to announce the soft launch of our
-                  newly designed website! As Melior evolves, the new design
-                  aligns to its values and vision. With a mission ...
-                </p>
-                <span>November 9 2022</span>
-              </div>
-            </div>
+        <div className="container content-space-b-2 content-space-b-lg-3 mt-10">
+          <div className="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+            <h1>STORIES</h1>
           </div>
 
-          <div className="col-sm-6 col-md-3 mb-5 mb-md-0">
-            <div className="card h-100">
-              <div className="overlay">
-                <a href="#">
-                  <img
-                    className="card-img-top homeOverlayImageSize"
-                    src="img/story21.png"
-                    alt="Image Description"
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <p>Melior Collaborates with NOWPDP</p>
-                <p className="fontBolder">
-                  Melior and NOWPDP collaborate to organize a “Disability
-                  Sensitization Training” for Melior employees to better
-                  understand the People with Disabilities.
-                </p>
-                <span>August 16 2022</span>
+          <div className="row">
+            <div className="col-sm-6 col-md-3 mb-5 mb-md-0">
+              <div className="card h-100">
+                <div className="overlay">
+                  <a href="#">
+                    <img
+                      className="card-img-top homeOverlayImageSize"
+                      src="img/story12.png"
+                      alt="Image Description"
+                    />
+                  </a>
+                </div>
+                <div className="card-body">
+                  <p>New Website Soft Launch</p>
+                  <p className="fontBolder">
+                    We are more than happy to announce the soft launch of our
+                    newly designed website! As Melior evolves, the new design
+                    aligns to its values and vision. With a mission ...
+                  </p>
+                  <span>November 9 2022</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="col-sm-6 col-md-3">
-            <div className="card h-100">
-              <div className="overlay">
-                <a href="#">
-                  <img
-                    className="card-img-top homeOverlayImageSize"
-                    src="img/story31.jpg"
-                    alt="Image Description"
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <p>Trip to the Sharan Shogran Hilltop</p>
-                <p className="fontBolder">
-                  Working better starts from living better and with the
-                  consistent improvement on your lifestyle provided from
-                  adequate outdoor activities
-                </p>
-                <span>October 28 2022</span>
+            <div className="col-sm-6 col-md-3 mb-5 mb-md-0">
+              <div className="card h-100">
+                <div className="overlay">
+                  <a href="#">
+                    <img
+                      className="card-img-top homeOverlayImageSize"
+                      src="img/story21.png"
+                      alt="Image Description"
+                    />
+                  </a>
+                </div>
+                <div className="card-body">
+                  <p>Melior Collaborates with NOWPDP</p>
+                  <p className="fontBolder">
+                    Melior and NOWPDP collaborate to organize a “Disability
+                    Sensitization Training” for Melior employees to better
+                    understand the People with Disabilities.
+                  </p>
+                  <span>August 16 2022</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-sm-6 col-md-3">
-            <div className="card h-100">
-              <div className="overlay">
-                <a href="#">
-                  <img
-                    className="card-img-top homeOverlayImageSize"
-                    src="img/story41.jpg"
-                    alt="Image Description"
-                  />
-                </a>
+
+            <div className="col-sm-6 col-md-3">
+              <div className="card h-100">
+                <div className="overlay">
+                  <a href="#">
+                    <img
+                      className="card-img-top homeOverlayImageSize"
+                      src="img/story31.jpg"
+                      alt="Image Description"
+                    />
+                  </a>
+                </div>
+                <div className="card-body">
+                  <p>Trip to the Sharan Shogran Hilltop</p>
+                  <p className="fontBolder">
+                    Working better starts from living better and with the
+                    consistent improvement on your lifestyle provided from
+                    adequate outdoor activities
+                  </p>
+                  <span>October 28 2022</span>
+                </div>
               </div>
-              <div className="card-body">
-                <p>PanIQ Escape Room Islamabad</p>
-                <p className="fontBolder">
-                  Building a great team environment doesn’t happen overnight and
-                  merely coexisting around subjectively wonderful people does
-                  not suffice.{" "}
-                </p>
-                <span>June 15 2022</span>
+            </div>
+            <div className="col-sm-6 col-md-3">
+              <div className="card h-100">
+                <div className="overlay">
+                  <a href="#">
+                    <img
+                      className="card-img-top homeOverlayImageSize"
+                      src="img/story41.jpg"
+                      alt="Image Description"
+                    />
+                  </a>
+                </div>
+                <div className="card-body">
+                  <p>PanIQ Escape Room Islamabad</p>
+                  <p className="fontBolder">
+                    Building a great team environment doesn’t happen overnight
+                    and merely coexisting around subjectively wonderful people
+                    does not suffice.{" "}
+                  </p>
+                  <span>June 15 2022</span>
+                </div>
               </div>
             </div>
           </div>

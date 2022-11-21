@@ -4,7 +4,6 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
  @font-face {
     font-family: 'AxiformaBold';
     src: url(../fonts/Kastelov\ -\ Axiforma\ Bold.otf);
@@ -24621,6 +24620,14 @@ a:hover .text-inherit {
 
 .fontBolder {
     font-weight: bolder;
+}
+
+.pl24P {
+    padding-left: 24px;
+}
+
+.hwoColor {
+    color: #243173;
 }
 
 @media (max-width: 576px) {
